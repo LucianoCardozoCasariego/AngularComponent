@@ -13,6 +13,8 @@ import { TooltipService } from '../../../pages/tooltip/core/service/tooltip.serv
   styleUrl: './lateral-navbar.component.css',
 })
 export class LateralNavbarComponent {
+  url =
+    'https://github.com/LucianoCardozoCasariego/AngularComponent/tree/master/src/app/pages';
   get isColapse() {
     return this.lateralNav.isColapse();
   }

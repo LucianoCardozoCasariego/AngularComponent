@@ -10,7 +10,6 @@ import { TestToasComponent } from './examples/test-toas/test-toas.component';
   styleUrl: './demo.component.css',
 })
 export class DemoComponent {
-  //TODO una vez lo suba a git, actualizar con las url de cada seccion
   constructor(private toastService: ToastService) {}
 
   showToastOK() {

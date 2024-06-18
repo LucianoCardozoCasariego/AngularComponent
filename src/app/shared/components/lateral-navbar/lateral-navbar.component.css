@@ -1,6 +1,7 @@
 main {
   --header-bg: #012245;
   --li-active-bg: #012245;
+  --footer-heihgt: 40px;
 
   background-color: var(--app-background-white);
   position: fixed;
@@ -19,10 +20,13 @@ header {
   padding-left: 20px;
   box-sizing: border-box;
   transition: width 0.3s;
-  h2 {
+  a {
     font-size: 16px;
     font-family: Raleway;
     font-weight: 200;
+    cursor: pointer;
+    text-decoration: none;
+    color: var(--text-white);
     span {
       font-weight: bold;
     }
@@ -45,7 +49,7 @@ nav {
   color: var(--text-white);
 
   width: var(--lateral-nab-width);
-  height: calc(100vh - var(--header-height));
+  height: calc(100vh - var(--header-height) - var(--footer-heihgt));
 
   display: flex;
   flex-direction: column;
@@ -114,4 +118,20 @@ nav {
   background-color: var(--li-active-bg);
   border-radius: 5px;
   color: var(--text-white) !important;
+}
+
+.footer {
+  font-size: 0.8rem;
+  height: var(--footer-heihgt);
+  background-color: var(--header-bg);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  a {
+    color: var(--text-white);
+    padding: 0px;
+    margin: 0px;
+    text-decoration: none;
+  }
 }

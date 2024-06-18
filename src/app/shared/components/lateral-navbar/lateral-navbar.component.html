@@ -1,7 +1,9 @@
 <main>
   <header [ngClass]="{ colapseHeader: isColapse }">
-    <h2 *ngIf="!isColapse"><span>Features</span>Components</h2>
-    <h2 *ngIf="isColapse"><span>F</span>C</h2>
+    <a [href]="url" target="_blank" *ngIf="!isColapse">
+      <span>Features</span>Components
+    </a>
+    <a [href]="url" target="_blank" *ngIf="isColapse"><span>F</span>C</a>
     @if (isColapse) {
     <div
       class="colapse-arrow"
@@ -134,4 +136,12 @@
     </ul>
     }
   </nav>
+
+  <div class="footer">
+    <a [href]="url" target="_blank" *ngIf="!isColapse">
+      Go to the repository
+    </a>
+
+    <a [href]="url" target="_blank" *ngIf="isColapse"> code </a>
+  </div>
 </main>
