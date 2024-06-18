@@ -1,0 +1,137 @@
+<main>
+  <header [ngClass]="{ colapseHeader: isColapse }">
+    <h2 *ngIf="!isColapse"><span>Features</span>Components</h2>
+    <h2 *ngIf="isColapse"><span>F</span>C</h2>
+    @if (isColapse) {
+    <div
+      class="colapse-arrow"
+      appSvg
+      svgName="menu_arrow_rigth"
+      svgHeight="20px"
+      svgWidth="20px"
+      svgPointer
+      (click)="onClic()"
+    ></div>
+    }@else {
+    <div
+      class="colapse-arrow"
+      appSvg
+      svgName="menu_arrow_left"
+      svgHeight="20px"
+      svgWidth="20px"
+      svgPointer
+      (click)="onClic()"
+    ></div>
+    }
+  </header>
+
+  <nav [ngClass]="{ colapseMenu: isColapse }">
+    <h2 class="section">{{ isColapse ? "FEAT" : "FEATURES" }}</h2>
+    @if (isColapse) {
+    <ul>
+      <li
+        *ngFor="let link of FeatureLinkList"
+        routerLink="{{ link.url }}"
+        routerLinkActive="active"
+      >
+        <div
+          *ngIf="!isCurrentRoute(link.url)"
+          appSvg
+          svgName="{{ link.svgName }}"
+          svgColor="#98A9BC"
+          svgHeight="20px"
+          svgWidth="20px"
+        ></div>
+        <div
+          *ngIf="isCurrentRoute(link.url)"
+          appSvg
+          svgName="{{ link.svgName }}"
+          svgColor="#008FF6"
+          svgHeight="20px"
+          svgWidth="20px"
+        ></div>
+      </li>
+    </ul>
+    }@else {
+    <ul>
+      <li
+        *ngFor="let link of FeatureLinkList"
+        routerLink="{{ link.url }}"
+        routerLinkActive="active"
+      >
+        <div
+          *ngIf="!isCurrentRoute(link.url)"
+          appSvg
+          svgName="{{ link.svgName }}"
+          svgColor="#98A9BC"
+          svgHeight="15px"
+          svgWidth="15px"
+        ></div>
+        <div
+          *ngIf="isCurrentRoute(link.url)"
+          appSvg
+          svgName="{{ link.svgName }}"
+          svgColor="#008FF6"
+          svgHeight="15px"
+          svgWidth="15px"
+        ></div>
+        {{ link.title }}
+      </li>
+    </ul>
+    }
+
+    <h2 class="section mt">{{ isColapse ? "COMP" : "COMPONENTS" }}</h2>
+    @if (isColapse) {
+    <ul>
+      <li
+        *ngFor="let link of ComponentLinkList"
+        routerLink="{{ link.url }}"
+        routerLinkActive="active"
+      >
+        <div
+          *ngIf="!isCurrentRoute(link.url)"
+          appSvg
+          svgName="{{ link.svgName }}"
+          svgColor="#98A9BC"
+          svgHeight="20px"
+          svgWidth="20px"
+        ></div>
+        <div
+          *ngIf="isCurrentRoute(link.url)"
+          appSvg
+          svgName="{{ link.svgName }}"
+          svgColor="#008FF6"
+          svgHeight="20px"
+          svgWidth="20px"
+        ></div>
+      </li>
+    </ul>
+    }@else {
+    <ul>
+      <li
+        *ngFor="let link of ComponentLinkList"
+        routerLink="{{ link.url }}"
+        routerLinkActive="active"
+      >
+        <div
+          *ngIf="!isCurrentRoute(link.url)"
+          appSvg
+          svgName="{{ link.svgName }}"
+          svgColor="#98A9BC"
+          svgHeight="15px"
+          svgWidth="15px"
+        ></div>
+        <div
+          *ngIf="isCurrentRoute(link.url)"
+          appSvg
+          svgName="{{ link.svgName }}"
+          svgColor="#008FF6"
+          svgHeight="15px"
+          svgWidth="15px"
+        ></div>
+        {{ link.title }}
+      </li>
+    </ul>
+    }
+  </nav>
+</main>

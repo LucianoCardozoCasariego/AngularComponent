@@ -1,0 +1,59 @@
+<main>
+  <div class="list">
+    <div class="card">
+      <h2>Default</h2>
+
+      <app-select
+        placeholder="Seleccione algo"
+        (selectedOption)="listen($event)"
+        [options]="items.slice(0, 3)"
+      />
+    </div>
+
+    <div class="card">
+      <h2>Close at select</h2>
+
+      <app-select
+        placeholder="Seleccione algo"
+        (selectedOption)="listen($event)"
+        [options]="items.slice(0, 6)"
+        [closeAtSelect]="true"
+      />
+    </div>
+
+    <div class="card">
+      <h2>Scroll bar</h2>
+
+      <app-select
+        placeholder="Seleccione algo"
+        (selectedOption)="listen($event)"
+        [closeAtSelect]="true"
+        [options]="items"
+      />
+    </div>
+
+    <div class="card">
+      <h2>Clear selected option</h2>
+
+      <app-select
+        placeholder="Seleccione algo"
+        (selectedOption)="listen($event)"
+        [closeAtSelect]="true"
+        [options]="items"
+        cleanOption="Clean selected option"
+      />
+    </div>
+
+    <div class="card">
+      <h2>Styled Select</h2>
+
+      <app-select
+        placeholder="Seleccione algo"
+        (selectedOption)="listen($event)"
+        [closeAtSelect]="true"
+        [options]="items"
+        [selectStyles]="styles"
+      />
+    </div>
+  </div>
+</main>

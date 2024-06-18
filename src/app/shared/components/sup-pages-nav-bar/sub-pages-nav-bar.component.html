@@ -1,0 +1,7 @@
+<div class="dashboard-nav">
+  @for (route of routes; track route.url) {
+  <a routerLink="{{ route.url }}" routerLinkActive="active">{{
+    route.title
+  }}</a>
+  }
+</div>

@@ -1,0 +1,30 @@
+:root {
+  /*Colors*/
+  --primary-dark-blue: #010318;
+  --primary-white: #fefefe;
+  --primary-swimlane: #e0eff8;
+
+  --app-background: #f4f5f7;
+  --app-background-white: #ffffff;
+
+  --accent: #009ef7;
+
+  --text-dark-blue: #010318;
+  --text-white: #fefefe;
+  --text-secondary-blue: #98a9bc;
+
+  --suport-lines: #efecec;
+  --suport-forms: #e2dfdf;
+
+  --level-bad: #ff0202;
+  --level-low: #f9e000;
+  --level-regular: #ff932f;
+  --level-good: #7cc209;
+  --level-excelent: #00cdc1;
+
+  /*Measures*/
+  --header-height: 60px;
+  --latearal-nav-separation: 30px;
+  --lateral-nab-width: 250px;
+  --lateral-nav-colapse-width: 60px;
+}

@@ -1,0 +1,21 @@
+.dashboard-nav {
+  padding: 0px var(--latearal-nav-separation);
+  border-top: 1px solid var(--suport-lines);
+  background-color: var(--app-background-white);
+  border-bottom: 1px solid var(--suport-lines);
+  display: flex;
+
+  a {
+    font-size: 14px;
+    padding: 10px 0px 10px 20px;
+    align-self: center;
+    text-decoration: none;
+    color: var(--text-secondary-blue);
+    width: 200px;
+  }
+  .active {
+    color: var(--accent);
+    border-bottom: 2px solid var(--accent);
+    background-color: var(--app-background);
+  }
+}

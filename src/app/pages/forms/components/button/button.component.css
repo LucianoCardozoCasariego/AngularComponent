@@ -1,0 +1,69 @@
+.button {
+  border: none;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+.solid {
+  background-color: var(--accent);
+  color: var(--text-white);
+  padding: 7px 20px;
+}
+
+.borderer {
+  padding: 6px 20px;
+  background-color: var(--primary-white);
+}
+
+.danger_borderer {
+  border: 1px solid var(--level-bad);
+  color: var(--level-bad);
+}
+
+.primary_borderer {
+  border: 1px solid var(--accent);
+  color: var(--accent);
+}
+
+.warn_borderer {
+  border: 1px solid var(--level-regular);
+  color: var(--level-regular);
+}
+
+.success_borderer {
+  border: 1px solid var(--level-good);
+  color: var(--level-good);
+}
+
+.danger_solid {
+  background-color: var(--level-bad);
+  color: var(--text-white);
+}
+
+.primary_solid {
+  background-color: var(--accent);
+  color: var(--text-white);
+}
+
+.warn_solid {
+  background-color: var(--level-regular);
+  color: var(--text-white);
+}
+
+.success_solid {
+  background-color: var(--level-good);
+  color: var(--text-white);
+}
+
+.disable_solid {
+  cursor: initial;
+  background-color: var(--primary-swimlane);
+  color: var(--text-secondary-blue);
+}
+
+.disable_borderer {
+  cursor: initial;
+  background-color: var(--primary-white);
+  color: var(--text-secondary-blue);
+  border: 1px solid var(--primary-swimlane);
+}

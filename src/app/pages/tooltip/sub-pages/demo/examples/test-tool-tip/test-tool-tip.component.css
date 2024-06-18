@@ -1,0 +1,11 @@
+p,
+h1 {
+  padding: 5px 20px;
+  margin: 0px;
+  font-size: 0.8rem;
+}
+
+p {
+  width: 180px;
+  margin-bottom: 15px;
+}

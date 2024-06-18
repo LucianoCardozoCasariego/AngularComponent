@@ -1,0 +1,13 @@
+<div class="deleteModal">
+  <h2 class="modal_title">Eliminar busquedas</h2>
+
+  <p class="modal_text">
+    Desea eliminar
+    {{ this.cant | i18nPlural : messageMapping }}
+  </p>
+
+  <div class="modal_actions">
+    <app-button [borderer]="true" (click)="close()">No</app-button>
+    <app-button (click)="submitData()">Si</app-button>
+  </div>
+</div>

@@ -1,0 +1,51 @@
+<main>
+  <div class="content">
+    <div class="solid">
+      <h2>Solid</h2>
+      <div class="card">
+        <h2>Primary</h2>
+        <app-button>Boton!</app-button>
+      </div>
+      <div class="card">
+        <h2>Danger</h2>
+        <app-button color="Danger">Boton!</app-button>
+      </div>
+      <div class="card">
+        <h2>Success</h2>
+        <app-button color="Success">Boton!</app-button>
+      </div>
+      <div class="card">
+        <h2>Warn</h2>
+        <app-button color="Warn">Boton!</app-button>
+      </div>
+      <div class="card">
+        <h2>Disable</h2>
+        <app-button [disable]="true">Boton!</app-button>
+      </div>
+    </div>
+
+    <div class="outline">
+      <h2>Outline</h2>
+      <div class="card">
+        <h2>Primary</h2>
+        <app-button [borderer]="true">Boton!</app-button>
+      </div>
+      <div class="card">
+        <h2>Danger</h2>
+        <app-button color="Danger" [borderer]="true">Boton!</app-button>
+      </div>
+      <div class="card">
+        <h2>Success</h2>
+        <app-button color="Success" [borderer]="true">Boton!</app-button>
+      </div>
+      <div class="card">
+        <h2>Warn</h2>
+        <app-button color="Warn" [borderer]="true">Boton!</app-button>
+      </div>
+      <div class="card">
+        <h2>Disable</h2>
+        <app-button [disable]="true" [borderer]="true">Boton!</app-button>
+      </div>
+    </div>
+  </div>
+</main>

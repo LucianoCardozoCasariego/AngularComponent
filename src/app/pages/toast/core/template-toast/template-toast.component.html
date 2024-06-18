@@ -1,0 +1,43 @@
+<div
+  class="container"
+  [ngClass]="{
+    'container-top-rigth': toastPosition == 'RIGTH-TOP',
+    'container-bottom-rigth': toastPosition == 'RIGTH-BOTTOM',
+    'container-top-left': toastPosition == 'LEFT-TOP',
+    'container-bottom-left': toastPosition == 'LEFT-BOTTOM'
+  }"
+>
+  <div
+    [@toasAnimation]="animationData()"
+    class="content toast_position"
+    [ngClass]="{
+      content_styles: !emptyToast,
+
+      'toast-init-position-Bottom': toastPosition?.includes('BOTTOM'),
+      'toast-init-position-TOP': toastPosition?.includes('TOP'),
+
+      content_succes: styleType == 'SUCCES',
+      content_info: styleType == 'INFO',
+      content_error: styleType == 'ERROR',
+      content_warning: styleType == 'WARNING',
+
+      cursor: closeAtClick,
+    }"
+    (mouseleave)="onMouseLeave()"
+    (mouseenter)="onMouseEnter()"
+    (click)="closeToast()"
+  >
+    <div
+      class="timer"
+      *ngIf="timerBar!.showTimeBar && !emptyToast"
+      [ngStyle]="{ width: timerbar }"
+      [ngClass]="{
+        timer_succes: styleType == 'SUCCES',
+        timer_info: styleType == 'INFO',
+        timer_error: styleType == 'ERROR',
+        timer_warning: styleType == 'WARNING',
+      }"
+    ></div>
+    <ng-container #parentContainer></ng-container>
+  </div>
+</div>

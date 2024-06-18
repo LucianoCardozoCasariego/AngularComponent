@@ -1,0 +1,13 @@
+main {
+  display: flex;
+
+  div {
+    width: 100%;
+    margin-left: var(--lateral-nab-width);
+    transition: margin 0.3s;
+  }
+}
+
+.colapse {
+  margin-left: var(--lateral-nav-colapse-width) !important;
+}

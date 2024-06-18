@@ -1,0 +1,50 @@
+<div class="select" #select [style]="selectElementStyles">
+  <div
+    class="display"
+    (click)="toogleOptions()"
+    [ngClass]="{ borderBottom: isOpen() }"
+    [style]="displayStyles"
+  >
+    <p #display></p>
+    <svg
+      viewBox="0 0 8 5"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+      [ngClass]="{ rotateIcon: isOpen() }"
+      width="15"
+      height="15"
+    >
+      <path
+        d="M3.53542 4.125L7.07083 0.589582L6.48167 -9.53674e-07L3.53542 2.94667L0.589167 -9.53674e-07L0 0.589582L3.53542 4.125Z"
+        fill="#C8CBEB"
+      />
+    </svg>
+  </div>
+
+  <div
+    *ngIf="isOpen()"
+    class="options_list"
+    [style]="optionListStyles"
+    [ngClass]="{ scroll: hasScrool }"
+  >
+    <p
+      *ngIf="cleanOption"
+      (click)="cleanSelectedOption()"
+      class="option clearOption"
+      [ngClass]="{ centerOptions: selectStyles?.centerOptions }"
+      [style]="optionStyles"
+    >
+      {{ cleanOption }}
+    </p>
+    @for (option of items; track $index) {
+    <p
+      (click)="selectItem(option)"
+      class="option optionColor"
+      [ngClass]="{ centerOptions: selectStyles?.centerOptions }"
+      [style]="optionStyles"
+    >
+      {{ option.title }}
+    </p>
+    }
+  </div>
+</div>

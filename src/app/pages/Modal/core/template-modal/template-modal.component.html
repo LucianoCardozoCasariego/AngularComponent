@@ -1,0 +1,22 @@
+<div class="content">
+  <div
+    *ngIf="title"
+    class="header"
+    [style]="{ 'padding-left': title.leftSpace + 'px' }"
+  >
+    <h3>{{ title.content }}</h3>
+  </div>
+  <div
+    *ngIf="isXiconDisable"
+    class="close"
+    svgName="x"
+    appSvg
+    svgHeight="15px"
+    svgWidth="15px"
+    svgPointer
+    (click)="close()"
+  ></div>
+  <ng-container #parentContainer></ng-container>
+</div>
+
+<div class="bg" (click)="closeByBackground()"></div>

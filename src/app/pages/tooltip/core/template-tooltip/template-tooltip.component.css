@@ -1,0 +1,58 @@
+.bg {
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.3);
+
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 50;
+}
+
+.container {
+  position: absolute;
+  background-color: white;
+  border: 3px solid var(--text-secondary-blue);
+  border-radius: 8px;
+  z-index: 99999;
+  padding: 0px;
+}
+
+.flecha {
+  background-color: white;
+  border-radius: 2px;
+  width: 15px;
+  height: 15px;
+  position: absolute;
+  clip-path: polygon(0% 0%, 100% 0%, 100% 100%);
+  border-top: 3px solid var(--text-secondary-blue);
+  border-right: 3px solid var(--text-secondary-blue);
+}
+
+.flecha_bottom {
+  bottom: -9px;
+  left: 50%;
+  transform: translateX(-50%) rotate(135deg);
+}
+
+.flecha_left {
+  top: 20%;
+  left: -9px;
+  transform: rotate(225deg);
+}
+
+.flecha_rigth {
+  top: 20%;
+  right: -9px;
+  transform: rotate(45deg);
+}
+.flecha_top {
+  top: -9px;
+  right: 50%;
+  transform: translateX(50%) rotate(315deg);
+}
+
+.simpleTooltip {
+  padding: 10px 10px;
+  font-size: 0.8rem;
+}

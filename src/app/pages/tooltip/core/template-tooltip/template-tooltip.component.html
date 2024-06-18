@@ -1,0 +1,19 @@
+<div #tooltip class="container" [ngStyle]="coordenates()">
+  <div
+    *ngIf="showArrow"
+    class="flecha"
+    [ngClass]="{
+      flecha_bottom: arrowPosition == 'BOTTOM',
+      flecha_top: arrowPosition == 'TOP',
+      flecha_left: arrowPosition == 'LEFT',
+      flecha_rigth: arrowPosition == 'RIGHT'
+    }"
+  ></div>
+
+  <ng-container #parentContainer></ng-container>
+  <div *ngIf="basicTooltipContent" class="simpleTooltip">
+    {{ basicTooltipContent.innerHTML }}
+  </div>
+</div>
+
+<div class="bg" *ngIf="blurBackground" (click)="closeByBackground()"></div>

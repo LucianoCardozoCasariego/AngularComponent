@@ -1,0 +1,26 @@
+.deleteModal {
+  width: 500px;
+  display: flex;
+  flex-direction: column;
+}
+
+.modal_title {
+  font-size: 14px;
+  font-weight: 500;
+  margin: 0px;
+  padding: 20px 20px 0px 20px;
+}
+
+.modal_text {
+  font-size: 13px;
+  padding: 0px 20px 0px 20px;
+}
+
+.modal_actions {
+  border-top: 1px solid var(--suport-lines);
+  display: flex;
+  gap: 10px;
+  align-items: flex-end;
+  justify-content: flex-end;
+  padding: 10px;
+}

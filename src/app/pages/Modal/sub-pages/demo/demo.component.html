@@ -1,0 +1,36 @@
+<main>
+  <div (click)="openModalA()" class="card">
+    <h2>Modal de vacio</h2>
+    <p>
+      Este es un modal tal cual lo crea ng, con todos sus valores por defecto
+    </p>
+    <p>
+      lo unico que tiene que tener para andar es extender de
+      <b>TemplateConection</b>
+    </p>
+  </div>
+
+  <div class="card">
+    <h2>Modal de eliminar</h2>
+    <p>
+      espera un valor en las <b>options.data</b> para mostrarse correctamente
+    </p>
+    <input type="number" [formControl]="cantForm" min="0" />
+    <p style="color: darkblue" (click)="openModalDelete()">Abrir modal</p>
+  </div>
+
+  <div (click)="openModalB()" class="card">
+    <h2>Modal vacio</h2>
+    <p>pero en las options indico que no se puede cerrar con el fondo</p>
+  </div>
+
+  <div (click)="openModalC()" class="card">
+    <h2>Modal vacio</h2>
+    <p>Sin la X para cerrar</p>
+  </div>
+
+  <div (click)="openModalD()" class="card">
+    <h2>Modal vacio</h2>
+    <p>Modal con un header</p>
+  </div>
+</main>

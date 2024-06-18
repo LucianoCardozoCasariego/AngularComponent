@@ -1,0 +1,117 @@
+main {
+  --header-bg: #012245;
+  --li-active-bg: #012245;
+
+  background-color: var(--app-background-white);
+  position: fixed;
+}
+
+header {
+  border-radius: 0px 10px 0px 0px;
+  background-color: var(--header-bg);
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  position: relative;
+  height: var(--header-height);
+  width: var(--lateral-nab-width);
+  color: var(--text-white);
+  padding-left: 20px;
+  box-sizing: border-box;
+  transition: width 0.3s;
+  h2 {
+    font-size: 16px;
+    font-family: Raleway;
+    font-weight: 200;
+    span {
+      font-weight: bold;
+    }
+  }
+}
+
+.colapseHeader {
+  padding-left: 0px;
+  justify-content: center;
+  width: var(--lateral-nav-colapse-width);
+}
+
+.colapse-arrow {
+  position: absolute;
+  left: calc(100% - 13px);
+}
+
+nav {
+  background-color: var(--primary-dark-blue);
+  color: var(--text-white);
+
+  width: var(--lateral-nab-width);
+  height: calc(100vh - var(--header-height));
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  box-sizing: border-box;
+  padding-top: 40px;
+
+  transition: width 0.3s;
+  overflow: hidden;
+
+  .section {
+    margin: 0px;
+    font-size: 13px;
+    width: 100%;
+    text-align: center;
+    border-bottom: 1px solid #1f1f1f;
+    padding-bottom: 10px;
+  }
+
+  .mt {
+    margin-top: 20px;
+  }
+
+  ul {
+    padding: 0px;
+    margin: 5px 0px 0px 0px;
+    list-style: none;
+    width: 100%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+
+    li {
+      width: 80%;
+      padding: 5px 10px;
+      font-size: 15px;
+      display: flex;
+      gap: 5px;
+      align-items: center;
+      cursor: pointer;
+      color: var(--text-secondary-blue);
+    }
+  }
+}
+
+.colapseMenu {
+  width: 60px;
+
+  h2 {
+    padding-bottom: 0px;
+    padding-left: 0px;
+  }
+
+  ul {
+    li {
+      width: fit-content;
+      padding: 10px;
+    }
+  }
+}
+
+.active {
+  background-color: var(--li-active-bg);
+  border-radius: 5px;
+  color: var(--text-white) !important;
+}

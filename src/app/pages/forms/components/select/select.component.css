@@ -1,0 +1,97 @@
+.select {
+  --display-bg: #333;
+  --option-list-bg: #333;
+  --scroll-bar-color: #899baf;
+
+  --option-bg: darkcyan;
+  --option-color: #000;
+  --clear-option-bg: #9bb2b2;
+  --clear-option-color: #000;
+
+  --option-bg-hove: #333;
+  --option-color-hover: #eee;
+}
+
+.display {
+  height: 25px;
+  border-radius: 4px;
+  display: flex;
+  padding-left: 10px;
+  padding-right: 5px;
+  align-items: center;
+  justify-content: space-between;
+  cursor: pointer;
+  background-color: var(--display-bg);
+
+  p {
+    font-size: 0.9rem;
+  }
+}
+
+.borderBottom {
+  border-bottom-left-radius: 0px;
+  border-bottom: none;
+  border-bottom-right-radius: 0px;
+}
+
+.options_list {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  background-color: var(--option-list-bg);
+  padding: 5px;
+  padding-top: 0px;
+  max-height: 200px;
+
+  &::-webkit-scrollbar {
+    width: 5px;
+  }
+
+  &::-webkit-scrollbar-track {
+    background-color: var(--option-list-bg);
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background: var(--scroll-bar-color);
+    border-radius: 6px;
+  }
+
+  .option {
+    box-sizing: border-box;
+    cursor: pointer;
+    border-radius: 4px;
+
+    width: 100%;
+    padding: 5px;
+    margin: 0px;
+
+    font-size: 0.9rem;
+
+    &:hover {
+      background: var(--option-bg-hove);
+      color: var(--option-color-hover);
+    }
+  }
+}
+
+.clearOption {
+  color: var(--clear-option-color);
+  background-color: var(--clear-option-bg);
+}
+
+.optionColor {
+  color: var(--option-color);
+  background-color: var(--option-bg);
+}
+
+.scroll {
+  overflow-y: scroll;
+}
+
+.centerOptions {
+  text-align: center;
+}
+
+.rotateIcon {
+  transform: rotate(180deg);
+}

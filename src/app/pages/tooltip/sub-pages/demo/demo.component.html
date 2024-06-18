@@ -1,0 +1,114 @@
+<main>
+  <p>
+    Si cambias la resolución de la pantalla se buggea la posición de cada
+    tooltip. si lo haces toca F5 para que se cargue la nueva posición
+  </p>
+
+  <p>Cuando la posicion de los elementos target cambia, tambien se bugea</p>
+
+  <h3>HOVER</h3>
+  <div class="content">
+    <div
+      appToolTip
+      (onHover)="openTooltipA($event, 'test', 'TOP')"
+      tooltipID="test"
+      class="card"
+    >
+      <h2>Tooltip abajo</h2>
+      <p>
+        lo unico que tiene que tener el componente para andar como tooltip es
+        extender de
+        <b>TemplateConection</b>
+      </p>
+    </div>
+
+    <div
+      appToolTip
+      (onHover)="openTooltipA($event, 'test2', 'RIGHT')"
+      tooltipID="test2"
+      class="card"
+    >
+      <h2>Tooltip a la izquierda</h2>
+    </div>
+
+    <div
+      appToolTip
+      (onHover)="openTooltipA($event, 'test3', 'LEFT')"
+      tooltipID="test3"
+      class="card"
+    >
+      <h2>Tooltip a la derecha</h2>
+    </div>
+
+    <div
+      appToolTip
+      (onHover)="openTooltipA($event, 'test4', 'BOTTOM')"
+      tooltipID="test4"
+      class="card"
+    >
+      <h2>Tooltip a arriba</h2>
+    </div>
+  </div>
+
+  <h3>CLICK</h3>
+  <div class="content">
+    <div
+      appToolTip
+      (onClick)="openTooltipA($event, 'test-click', 'TOP')"
+      tooltipID="test-click"
+      class="card"
+    >
+      <h2>Tooltip a la abajo</h2>
+    </div>
+
+    <div
+      appToolTip
+      (onClick)="openTooltipA($event, 'test2-click', 'RIGHT')"
+      tooltipID="test2-click"
+      class="card"
+    >
+      <h2>Tooltip a la izquierda</h2>
+    </div>
+
+    <div
+      appToolTip
+      (onClick)="openTooltipA($event, 'test3-click', 'LEFT')"
+      tooltipID="test3-click"
+      class="card"
+    >
+      <h2>Tooltip a la derecha</h2>
+    </div>
+
+    <div
+      appToolTip
+      (onClick)="openTooltipA($event, 'test4-click', 'BOTTOM')"
+      tooltipID="test4-click"
+      class="card"
+    >
+      <h2>Tooltip a la arriba</h2>
+    </div>
+  </div>
+
+  <h3>String tooltip</h3>
+  <div class="content">
+    <div
+      appToolTip
+      (onClick)="openTooltipString($event, 'test-string', 'BOTTOM')"
+      tooltipID="test-string"
+      class="card"
+    >
+      <h2>Tooltip string</h2>
+      <p>Para crear un tooltip no hace falta crear un componente</p>
+      <p>puedo pasarle solo el string</p>
+    </div>
+
+    <div
+      appToolTip
+      (onClick)="openTooltipString($event, 'test2-string', 'LEFT')"
+      tooltipID="test2-string"
+      class="card"
+    >
+      <h2>Tooltip string</h2>
+    </div>
+  </div>
+</main>

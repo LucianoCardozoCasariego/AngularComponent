@@ -1,0 +1,23 @@
+<button
+  class="button"
+  [disabled]="disable"
+  [ngClass]="{
+    solid: !borderer,
+    borderer: borderer,
+
+    danger_solid: !borderer && color === 'Danger',
+    primary_solid: !borderer && color === 'Primary',
+    warn_solid: !borderer && color === 'Warn',
+    success_solid: !borderer && color === 'Success',
+
+    danger_borderer: borderer && color === 'Danger',
+    primary_borderer: borderer && color === 'Primary',
+    warn_borderer: borderer && color === 'Warn',
+    success_borderer: borderer && color === 'Success',
+
+    disable_solid:!borderer && disable,
+    disable_borderer: borderer && disable,
+  }"
+>
+  <ng-content></ng-content>
+</button>

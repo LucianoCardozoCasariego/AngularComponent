@@ -1,0 +1,12 @@
+@for ( itemDelay of itemsDelay ; track itemDelay) {
+<div class="skeleton">
+  <section>
+    <div class="skeleton-item check"></div>
+    <div class="skeleton-item info"></div>
+  </section>
+  <div class="skeleton-item date"></div>
+  <div class="skeleton-item options"></div>
+  <div class="brillo" [style.animation-delay]="itemDelay + 's'"></div>
+  <div class="brillo" [style.animation-delay]="itemDelay + 2 + 's'"></div>
+</div>
+}
